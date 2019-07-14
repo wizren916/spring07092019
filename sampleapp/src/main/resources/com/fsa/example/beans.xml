@@ -4,9 +4,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="person" class="com.fsa.example.Person">
-		<constructor-arg type="String" value="Mary"/>
-		<constructor-arg type="int" value="101"/>
-		<property name="taxId" value="321"/>
+		<constructor-arg type="String" value="Mary" />
+		<constructor-arg type="int" value="101" />
+		<property name="taxId" value="321" />
+		<property name="address" ref="address" />
 	</bean>
 
+	<bean id="address" class="com.fsa.example.Address">
+		<constructor-arg name="street" value="1234 Church Lane" />
+		<constructor-arg name="postcode" value="9876" />
+	</bean>
 </beans>
