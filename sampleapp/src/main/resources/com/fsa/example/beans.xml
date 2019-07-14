@@ -4,9 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="person" class="com.fsa.example.Person">
-		<constructor-arg value="101"></constructor-arg>
-		<constructor-arg value="Mary"></constructor-arg>
-		
+		<constructor-arg index="1" value="Mary"></constructor-arg>
+		<constructor-arg index="0" value="101"></constructor-arg>
 	</bean>
 
 </beans>
