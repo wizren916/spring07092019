@@ -13,4 +13,12 @@ public class Address {
 	public String toString() {
 		return "Address [street=" + street + ", postcode=" + postcode + "]";
 	}
+	
+	public void init() {
+		System.out.println("Deafult init called from Address: " + this);
+	}
+	
+	public void destroy() {
+		System.out.println("Deafult destroy called from Address: " + this);
+	}
 }

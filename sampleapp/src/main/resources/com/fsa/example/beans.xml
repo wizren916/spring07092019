@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" default-init-method="init" default-destroy-method="destroy">
 
-	<bean id="person" class="com.fsa.example.Person" scope="prototype">
+	<bean id="person" class="com.fsa.example.Person" scope="singleton" init-method="onCreate" destroy-method="onDestroy">
 		<constructor-arg type="String" value="Mary" />
 		<constructor-arg type="int" value="101" />
 		<property name="taxId" value="321" />

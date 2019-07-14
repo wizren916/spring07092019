@@ -28,4 +28,11 @@ public class Person {
 		return "Person [id=" + id + ", name=" + name + ", taxId=" + taxId + ", address=" + address + "]";
 	}
 
+	public void onCreate() {
+		System.out.println("OnCreate called from Person: " + this);
+	}
+	
+	public void onDestroy() {
+		System.out.println("OnDestroy called from Person: " + this);
+	}
 }
