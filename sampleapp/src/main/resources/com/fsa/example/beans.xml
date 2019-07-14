@@ -4,8 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="person" class="com.fsa.example.Person">
-		<constructor-arg type="String" value="Mary"></constructor-arg>
-		<constructor-arg type="int" value="101"></constructor-arg>
+		<constructor-arg type="String" value="Mary"/>
+		<constructor-arg type="int" value="101"/>
+		<property name="taxId" value="321"/>
 	</bean>
 
 </beans>
