@@ -6,8 +6,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/fsa/example/beans.xml");
 		Person person = (Person) context.getBean("person");
+		System.out.println(person);
 		person.speak();
 		((ClassPathXmlApplicationContext) context).close();
 	}
