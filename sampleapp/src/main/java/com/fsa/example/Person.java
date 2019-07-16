@@ -31,8 +31,13 @@ public class Person {
 	public void onCreate() {
 		System.out.println("OnCreate called from Person: " + this);
 	}
-	
+
 	public void onDestroy() {
 		System.out.println("OnDestroy called from Person: " + this);
+	}
+
+	public static Person getInstance(int id, String name) {
+		System.out.println("Factory method in person");
+		return new Person(id, name);
 	}
 }
